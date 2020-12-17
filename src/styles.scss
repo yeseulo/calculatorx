@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #efefef;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.calculator {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 26px 20px;
+  box-shadow: 5px 2.5px 10px rgba(0, 0, 0, 0.1), -5px -2.5px 10px white;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #efefef;
+}
+
+.display {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+  padding: 10px 16px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05), inset -1px -2px 5px rgba(255,255,255,0.8);
+  border-radius: 6px;
+  border: 1px solid #eee;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.controller {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+
+  button {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.04), -3px -3px 5px rgba(255,255,255,0.8);
+    border: none;
+    padding: 18px 16px;
+    color: #b791d6;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 1;
+    background-color: #efefef;
+    
+    outline: none;
+
+    &:active {
+      box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.05), inset -3px -3px 5px rgba(255,255,255,0.8);
+    }
+  }
+
+  .btn-clear {
+    color: #999;
+  }
+
+  .btn-zero {
+    grid-column: 1 / 3;
+  }
+
+  .operator {
+    color: #8ac5a3;
+  }
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 10px;
+  color: #aaa;
+  a { color: inherit; }
+}
